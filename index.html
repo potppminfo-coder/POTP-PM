@@ -273,50 +273,92 @@
                 </div>
             </div>
 
-            <!-- Courses Preview -->
-            <div class="py-20 bg-white">
-                <div class="container mx-auto px-6">
-                    <h2 class="text-4xl font-bold text-center text-blue-800 mb-12">دوراتنا المميزة</h2>
-                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        <div class="bg-gray-50 rounded-2xl p-6 shadow-lg card-hover course-card" style="animation-delay: 0.1s;">
-                            <div class="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mb-4 p-2 course-icon">
-                            <div class="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mb-4 p-2 course-icon">
-                                <img src="https://i.postimg.cc/h4sFk10Z/IMG-1588.png" alt="PMP Logo" class="w-full h-full object-contain" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-                                <i class="fas fa-certificate text-white text-2xl hidden"></i>
-                            </div>
-                            <h3 class="text-xl font-bold text-gray-800 mb-2">PMP® Professional</h3>
-                            <p class="text-gray-600 mb-4">شهادة إدارة المشاريع الاحترافية - الأكثر طلباً عالمياً</p>
-                            <button class="bg-blue-600 text-white px-6 py-2 rounded-full font-semibold hover:bg-blue-700 transition-all" onclick="showPage('courses')">
-                                عرض التفاصيل
-                            </button>
+            <!-- دوراتنا المميزة - سلايدر تلقائي -->
+<div class="py-20 bg-white">
+    <div class="container mx-auto px-6">
+        <h2 class="text-4xl font-bold text-center text-blue-800 mb-12">دوراتنا المميزة</h2>
+        <div id="courses-carousel" class="relative overflow-hidden">
+            <div id="courses-slides" class="flex transition-all duration-700">
+                <div class="min-w-full flex flex-col items-center justify-center px-4">
+                    <div class="bg-gray-50 rounded-2xl p-6 shadow-lg card-hover course-card flex flex-col items-center text-center">
+                        <div class="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mb-4 p-2 course-icon">
+                            <img src="https://i.postimg.cc/h4sFk10Z/IMG-1588.png" alt="PMP Logo" class="w-full h-full object-contain" loading="lazy">
                         </div>
-                        
-                        <div class="bg-gray-50 rounded-2xl p-6 shadow-lg card-hover course-card" style="animation-delay: 0.2s;">
-                            <div class="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mb-4 p-2 course-icon">
-                                <img src="https://i.postimg.cc/9Mt09g7H/IMG-1590.png" alt="CAPM Logo" class="w-full h-full object-contain" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-                                <i class="fas fa-user-graduate text-white text-2xl hidden"></i>
-                            </div>
-                            <h3 class="text-xl font-bold text-gray-800 mb-2">CAPM® Associate</h3>
-                            <p class="text-gray-600 mb-4">مساعد معتمد في إدارة المشاريع - للمبتدئين</p>
-                            <button class="bg-green-600 text-white px-6 py-2 rounded-full font-semibold hover:bg-green-700 transition-all" onclick="showPage('courses')">
-                                عرض التفاصيل
-                            </button>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">PMP® Professional</h3>
+                        <p class="text-gray-600 mb-4">شهادة إدارة المشاريع الاحترافية - الأكثر طلباً عالمياً</p>
+                        <button class="bg-blue-600 text-white px-6 py-2 rounded-full font-semibold hover:bg-blue-700 transition-all" onclick="showPage('courses')">
+                            عرض التفاصيل
+                        </button>
+                    </div>
+                </div>
+                <div class="min-w-full flex flex-col items-center justify-center px-4">
+                    <div class="bg-gray-50 rounded-2xl p-6 shadow-lg card-hover course-card flex flex-col items-center text-center">
+                        <div class="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mb-4 p-2 course-icon">
+                            <img src="https://i.postimg.cc/9Mt09g7H/IMG-1590.png" alt="CAPM Logo" class="w-full h-full object-contain" loading="lazy">
                         </div>
-                        
-                        <div class="bg-gray-50 rounded-2xl p-6 shadow-lg card-hover course-card" style="animation-delay: 0.3s;">
-                            <div class="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center mb-4 p-2 course-icon">
-                                <img src="https://i.postimg.cc/mkLDy3Yz/IMG-1591.png" alt="PMI-RMP Logo" class="w-full h-full object-contain" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-                                <i class="fas fa-shield-alt text-white text-2xl hidden"></i>
-                            </div>
-                            <h3 class="text-xl font-bold text-gray-800 mb-2">PMI-RMP® Risk</h3>
-                            <p class="text-gray-600 mb-4">إدارة المخاطر الاحترافية - للمشاريع المعقدة</p>
-                            <button class="bg-red-600 text-white px-6 py-2 rounded-full font-semibold hover:bg-red-700 transition-all" onclick="showPage('courses')">
-                                عرض التفاصيل
-                            </button>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">CAPM® Associate</h3>
+                        <p class="text-gray-600 mb-4">مساعد معتمد في إدارة المشاريع - للمبتدئين</p>
+                        <button class="bg-green-600 text-white px-6 py-2 rounded-full font-semibold hover:bg-green-700 transition-all" onclick="showPage('courses')">
+                            عرض التفاصيل
+                        </button>
+                    </div>
+                </div>
+                <div class="min-w-full flex flex-col items-center justify-center px-4">
+                    <div class="bg-gray-50 rounded-2xl p-6 shadow-lg card-hover course-card flex flex-col items-center text-center">
+                        <div class="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center mb-4 p-2 course-icon">
+                            <img src="https://i.postimg.cc/mkLDy3Yz/IMG-1591.png" alt="PMI-RMP Logo" class="w-full h-full object-contain" loading="lazy">
                         </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">PMI-RMP® Risk</h3>
+                        <p class="text-gray-600 mb-4">إدارة المخاطر الاحترافية - للمشاريع المعقدة</p>
+                        <button class="bg-red-600 text-white px-6 py-2 rounded-full font-semibold hover:bg-red-700 transition-all" onclick="showPage('courses')">
+                            عرض التفاصيل
+                        </button>
                     </div>
                 </div>
             </div>
+            <!-- Controls -->
+            <button id="courses-prev" class="absolute left-2 top-1/2 transform -translate-y-1/2 bg-blue-600 text-white rounded-full p-2 shadow-lg z-10"><i class="fas fa-chevron-right"></i></button>
+            <button id="courses-next" class="absolute right-2 top-1/2 transform -translate-y-1/2 bg-blue-600 text-white rounded-full p-2 shadow-lg z-10"><i class="fas fa-chevron-left"></i></button>
+        </div>
+    </div>
+</div>
+<!-- نهاية دوراتنا المميزة -->
+
+<!-- آراء المتدربين - سلايدر تلقائي -->
+<div class="py-20 bg-white">
+    <div class="container mx-auto px-6">
+        <h2 class="text-4xl font-bold text-center text-blue-800 mb-12">آراء المتدربين</h2>
+        <div id="reviews-carousel" class="relative overflow-hidden">
+            <div id="reviews-slides" class="flex transition-all duration-700">
+                <div class="min-w-full flex flex-col items-center justify-center px-4">
+                    <div class="bg-gray-50 rounded-2xl p-8 shadow-lg card-hover flex flex-col items-center text-center">
+                        <div class="font-bold text-lg text-blue-700 mb-2">م. سفيان الرطيب – مهندس مشرف</div>
+                        <p class="text-gray-700 mb-4">"دورة واضحة ومنظمة، والمدرب كان موسع بالشرح معنا. ننصح بها لكل من يريد التميز."</p>
+                        <div class="text-yellow-500 text-xl mb-2">التقييم: ★★★★☆</div>
+                    </div>
+                </div>
+                <div class="min-w-full flex flex-col items-center justify-center px-4">
+                    <div class="bg-gray-50 rounded-2xl p-8 shadow-lg card-hover flex flex-col items-center text-center">
+                        <div class="font-bold text-lg text-blue-700 mb-2">م. صبري عكريم – مراقب مشاريع</div>
+                        <p class="text-gray-700 mb-4">"المدرب أحاط بالمفاهيم وبسطها للمتدربين، دليل على تمكنه من منهج PMP."</p>
+                        <div class="text-yellow-500 text-xl mb-2">التقييم: ★★★★★</div>
+                    </div>
+                </div>
+                <div class="min-w-full flex flex-col items-center justify-center px-4">
+                    <div class="bg-gray-50 rounded-2xl p-8 shadow-lg card-hover flex flex-col items-center text-center">
+                        <div class="font-bold text-lg text-blue-700 mb-2">م. عبدالله باشا – مدير مشروع</div>
+                        <p class="text-gray-700 mb-4">"المدرب غطى الدورة بكفاءة عالية وحفّزنا على أخذ الشهادة الدولية PMP."</p>
+                        <div class="text-yellow-500 text-xl mb-2">التقييم: ★★★★★</div>
+                    </div>
+                </div>
+            </div>
+            <!-- Controls -->
+            <button id="reviews-prev" class="absolute left-2 top-1/2 transform -translate-y-1/2 bg-blue-600 text-white rounded-full p-2 shadow-lg z-10"><i class="fas fa-chevron-right"></i></button>
+            <button id="reviews-next" class="absolute right-2 top-1/2 transform -translate-y-1/2 bg-blue-600 text-white rounded-full p-2 shadow-lg z-10"><i class="fas fa-chevron-left"></i></button>
+        </div>
+    </div>
+</div>
+<!-- نهاية آراء المتدربين -->
 
             <!-- CTA Section -->
             <div class="gradient-bg text-white py-16">
@@ -584,7 +626,6 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
 
                     <div class="bg-gradient-to-r from-blue-600 to-blue-800 text-white rounded-2xl p-12 text-center">
                         <h3 class="text-3xl font-bold mb-8">فلسفة التدريب</h3>
@@ -612,160 +653,157 @@
 
         <!-- PMI Institute Section -->
         <section id="pmi-page" class="page-section">
-            <div class="py-20">
-                <div class="container mx-auto px-6">
-                    <div class="text-center mb-16">
-                        <div class="w-48 h-48 mx-auto mb-8">
-                            <img src="https://i.postimg.cc/rw6468Lc/pmi-logo-og-Share.png" alt="PMI Logo" class="w-full h-full object-contain" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                            <div class="w-full h-full bg-blue-600 rounded-full items-center justify-center hidden">
-                                <i class="fas fa-certificate text-white text-6xl"></i>
-                            </div>
-                        </div>
-                        <h1 class="text-5xl font-bold text-blue-800 mb-6">معهد إدارة المشاريع – PMI</h1>
-                        <p class="text-xl text-yellow-600 font-semibold mb-8">Lighting the way for the project profession since 1969</p>
-                        <p class="text-lg text-gray-600 max-w-4xl mx-auto leading-relaxed">
-                            منذ عام 1969، يشكل معهد إدارة المشاريع (PMI) السلطة الرائدة عالمياً في مجال إدارة المشاريع
-                        </p>
-                    </div>
-
-                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
-                        <div class="bg-gradient-to-br from-blue-600 to-blue-800 text-white rounded-2xl p-8">
-                            <div class="text-center mb-6">
-                                <div class="w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-4">
-                                    <i class="fas fa-bullseye text-2xl"></i>
-                                </div>
-                                <h3 class="text-2xl font-bold">رسالتنا</h3>
-                            </div>
-                            <p class="text-lg leading-relaxed opacity-90 text-center">
-                                نحن مجتمع يبتكر المنتجات والخدمات والخبرات التي تعزز نجاح المشاريع.
-                            </p>
-                        </div>
-
-                        <div class="bg-gradient-to-br from-green-600 to-green-800 text-white rounded-2xl p-8">
-                            <div class="text-center mb-6">
-                                <div class="w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-4">
-                                    <i class="fas fa-eye text-2xl"></i>
-                                </div>
-                                <h3 class="text-2xl font-bold">رؤيتنا</h3>
-                            </div>
-                            <p class="text-lg leading-relaxed opacity-90 text-center">
-                                عالم تحقق فيه كل المشاريع أقصى إمكاناتها لتحقيق أثر إيجابي.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="bg-white rounded-2xl p-8 shadow-lg text-center">
-                        <h2 class="text-3xl font-bold text-blue-800 mb-8">إحصائيات PMI العالمية</h2>
-                        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-                            <div>
-                                <div class="text-4xl font-bold text-blue-600 mb-2">1.7M+</div>
-                                <p class="text-gray-600">حاملي الشهادات حول العالم</p>
-                            </div>
-                            <div>
-                                <div class="text-4xl font-bold text-green-600 mb-2">200+</div>
-                                <p class="text-gray-600">دولة ومنطقة</p>
-                            </div>
-                            <div>
-                                <div class="text-4xl font-bold text-purple-600 mb-2">300+</div>
-                                <p class="text-gray-600">فرع محلي</p>
-                            </div>
-                            <div>
-                                <div class="text-4xl font-bold text-red-600 mb-2">55+</div>
-                                <p class="text-gray-600">عام من الخبرة</p>
-                            </div>
-                        </div>
+    <div class="py-20">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <div class="w-48 h-48 mx-auto mb-8">
+                    <img src="https://i.postimg.cc/rw6468Lc/pmi-logo-og-Share.png" alt="PMI Logo" class="w-full h-full object-contain" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <div class="w-full h-full bg-blue-600 rounded-full items-center justify-center hidden">
+                        <i class="fas fa-certificate text-white text-6xl"></i>
                     </div>
                 </div>
+                <h1 class="text-5xl font-bold text-blue-800 mb-6">معهد إدارة المشاريع – PMI</h1>
+                <p class="text-xl text-yellow-600 font-semibold mb-8">Lighting the way for the project profession since 1969</p>
+                <p class="text-lg text-gray-600 max-w-4xl mx-auto leading-relaxed">
+                    منذ عام 1969، يشكل معهد إدارة المشاريع (PMI) السلطة الرائدة عالميًا في مجال إدارة المشاريع، ملتزمًا بتوجيه الطريق نحو نجاح المشاريع وتسليط الضوء على قوة إدارة المشاريع والأشخاص الذين يقفون خلفها.
+                </p>
             </div>
+
+            <!-- نبذة وتاريخ PMI -->
+            <div class="bg-white rounded-2xl p-8 shadow-lg mb-12 max-w-4xl mx-auto">
+                <h2 class="text-2xl font-bold text-blue-800 mb-4 text-center">تاريخ PMI</h2>
+                <p class="text-gray-700 mb-4 text-center">
+                    منذ تأسيسه، ركز PMI على جمع المهنيين معًا وتعريف وتطوير مهنة إدارة المشاريع بشكل مستمر.<br>
+                    بدأت الفكرة بعد سلسلة من النقاشات بين جيم سنيدر وزملائه، وأسفرت عن اجتماع رسمي في معهد جورجيا للتكنولوجيا، أتلانتا، الولايات المتحدة الأمريكية في 3 أكتوبر 1969، حيث وُلد معهد PMI.<br>
+                    وتم توقيع أوراق التأسيس في بنسلفانيا من قبل خمسة مؤسسين رسميين.
+                </p>
+                <h3 class="text-xl font-bold text-blue-700 mb-2">المؤسسون الخمسة</h3>
+                <ul class="mb-4 text-gray-700 list-disc list-inside">
+                    <li><span class="font-bold">James Snyder</span> – المؤسس والمدير التنفيذي الأول</li>
+                    <li><span class="font-bold">Eric Jenett</span> – أول حاصل على شهادة PMP®</li>
+                    <li><span class="font-bold">Gordon Davis</span> – بناء الأسس الأكاديمية</li>
+                    <li><span class="font-bold">E.A. "Ned" Engman</span> – تطبيق مبادئ إدارة المشاريع</li>
+                    <li><span class="font-bold">Susan C. Gallagher</span> – إدارة الأنشطة المالية والفنية</li>
+                </ul>
+                <h3 class="text-xl font-bold text-blue-700 mb-2">مراحل تطور PMI عبر العقود</h3>
+                <div class="mb-4 text-gray-700">
+                    <div><span class="font-bold">1969-1979:</span> البداية والانطلاق – تنظيم أولى الندوات والمؤتمرات وافتتاح أول فروعه.</div>
+                    <div><span class="font-bold">1979-1989:</span> فترة التغيير – توسيع الفروع، تقديم شهادة PMP®، تأسيس جوائز التميز.</div>
+                    <div><span class="font-bold">1989-1999:</span> خطوات كبيرة نحو العالمية – إصدار أول نسخة من PMBOK® Guide، أول منتدى عالمي.</div>
+                    <div><span class="font-bold">1999-2009:</span> التوسع العالمي – ترجمة دليل PMBOK®، إطلاق مركز الاعتماد العالمي.</div>
+                    <div><span class="font-bold">2009-2019:</span> الوصول إلى آفاق جديدة – فتح مكاتب دولية، إطلاق شهادات جديدة.</div>
+                    <div><span class="font-bold">2019-2024:</span> المستقبل نحو الأمام – حملات توعية، دمج الذكاء الاصطناعي في المهنة.</div>
+                    <div><span class="font-bold">2024 – الحاضر:</span> إشعال الطريق نحو المستقبل – استراتيجية PMI:Next، تعزيز أثر المشاريع عالميًا.</div>
+                </div>
+                <h3 class="text-xl font-bold text-blue-700 mb-2">المؤسسون</h3>
+                <ul class="mb-4 text-gray-700 list-disc list-inside">
+                    <li><span class="font-bold">James R. Snyder</span> – المؤسس والمدير التنفيذي الأول، ويُلقب بـ "أب PMI".</li>
+                    <li><span class="font-bold">Eric Jenett, PMP</span> – أول حاصل على شهادة PMP® ومؤسس مشارك.</li>
+                    <li><span class="font-bold">J. Gordon Davis, PhD</span> – بناء الأسس الأكاديمية لمهنة إدارة المشاريع.</li>
+                    <li><span class="font-bold">Susan C. Gallagher</span> – إدارة أولى الأنشطة المالية والفنية.</li>
+                    <li><span class="font-bold">E.A. "Ned" Engman</span> – تطبيق مبادئ إدارة المشاريع في قطاع الصناعة.</li>
+                </ul>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-4">
+                    <div>
+                        <h4 class="font-bold text-blue-800 mb-2">رسالتنا</h4>
+                        <p class="text-gray-700">نحن مجتمع يبتكر المنتجات والخدمات والخبرات التي تعزز نجاح المشاريع.</p>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-blue-800 mb-2">رؤيتنا</h4>
+                        <p class="text-gray-700">عالم تحقق فيه كل المشاريع أقصى إمكاناتها لتحقيق أثر إيجابي.</p>
+                    </div>
+                </div>
+                <h4 class="font-bold text-blue-800 mb-2">قيمنا وأهدافنا</h4>
+                <ul class="mb-2 text-gray-700 list-disc list-inside">
+                    <li>تعظيم نجاح المشاريع – نحدد تعريفًا موحدًا لنجاح المشاريع يمكن للجميع الاتفاق عليه.</li>
+                    <li>إحداث أثر اجتماعي – نشجع المهنيين على استخدام مهاراتهم لتحقيق فرق إيجابي في المجتمع.</li>
+                </ul>
+            </div>
+            <!-- نهاية نبذة وتاريخ PMI -->
 
             <!-- شهادات PMI -->
-            <div class="py-20">
-                <div class="container mx-auto px-6">
-                    <div class="text-center mb-16">
-                        <h1 class="text-5xl font-bold text-blue-800 mb-6">شهادات PMI</h1>
-                        <p class="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-                            تعرف على مجموعة شهادات معهد إدارة المشاريع (PMI) المعتمدة عالمياً. للمزيد من التفاصيل زر الموقع الرسمي <a href="https://www.pmi.org/certifications" target="_blank" class="text-blue-600 underline">pmi.org</a>
-                        </p>
+            <div class="text-center mb-16">
+                <h1 class="text-5xl font-bold text-blue-800 mb-6">شهادات PMI</h1>
+                <p class="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+                    تعرف على مجموعة شهادات معهد إدارة المشاريع (PMI) المعتمدة عالمياً. للمزيد من التفاصيل زر الموقع الرسمي <a href="https://www.pmi.org/certifications" target="_blank" class="text-blue-600 underline">pmi.org</a>
+                </p>
+            </div>
+            <div class="mb-16">
+                <h2 class="text-3xl font-bold text-blue-800 mb-8 text-center">Core Certifications – الشهادات الأساسية</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="bg-white rounded-2xl shadow-lg p-6 card-hover flex flex-col items-center">
+                        <img src="https://i.postimg.cc/9Mt09g7H/IMG-1590.png" alt="CAPM Logo" class="w-16 h-16 mb-4 object-contain" loading="lazy">
+                        <h3 class="text-lg font-bold text-green-700 mb-2">CAPM®</h3>
+                        <p class="text-sm text-gray-700 mb-2">Certified Associate in Project Management</p>
+                        <p class="text-xs text-gray-500 mb-2">المعتمد المساعد في إدارة المشاريع</p>
                     </div>
-                    <div class="mb-16">
-                        <h2 class="text-3xl font-bold text-blue-800 mb-8 text-center">Core Certifications – الشهادات الأساسية</h2>
-                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                            <div class="bg-white rounded-2xl shadow-lg p-6 card-hover flex flex-col items-center">
-                                <img src="https://i.postimg.cc/9Mt09g7H/IMG-1590.png" alt="CAPM Logo" class="w-16 h-16 mb-4 object-contain" loading="lazy">
-                                <h3 class="text-lg font-bold text-green-700 mb-2">CAPM®</h3>
-                                <p class="text-sm text-gray-700 mb-2">Certified Associate in Project Management</p>
-                                <p class="text-xs text-gray-500 mb-2">المعتمد المساعد في إدارة المشاريع</p>
-                            </div>
-                            <div class="bg-white rounded-2xl shadow-lg p-6 card-hover flex flex-col items-center">
-                                <img src="https://i.postimg.cc/h4sFk10Z/IMG-1588.png" alt="PMP Logo" class="w-16 h-16 mb-4 object-contain" loading="lazy">
-                                <h3 class="text-lg font-bold text-blue-700 mb-2">PMP®</h3>
-                                <p class="text-sm text-gray-700 mb-2">Project Management Professional</p>
-                                <p class="text-xs text-gray-500 mb-2">المحترف في إدارة المشاريع</p>
-                            </div>
-                            <div class="bg-white rounded-2xl shadow-lg p-6 card-hover flex flex-col items-center">
-                                <img src="https://i.postimg.cc/FHg49xwz/twitter-thumb-201604-blob.png" alt="PgMP Logo" class="w-16 h-16 mb-4 object-contain" loading="lazy">
-                                <h3 class="text-lg font-bold text-purple-700 mb-2">PgMP®</h3>
-                                <p class="text-sm text-gray-700 mb-2">Program Management Professional</p>
-                                <p class="text-xs text-gray-500 mb-2">المحترف في إدارة البرامج</p>
-                            </div>
-                            <div class="bg-white rounded-2xl shadow-lg p-6 card-hover flex flex-col items-center">
-                                <img src="https://i.postimg.cc/tgqH7xH5/blob.png" alt="PfMP Logo" class="w-16 h-16 mb-4 object-contain" loading="lazy">
-                                <h3 class="text-lg font-bold text-indigo-700 mb-2">PfMP®</h3>
-                                <p class="text-sm text-gray-700 mb-2">Portfolio Management Professional</p>
-                                <p class="text-xs text-gray-500 mb-2">المحترف في إدارة المحافظ</p>
-                            </div>
-                        </div>
+                    <div class="bg-white rounded-2xl shadow-lg p-6 card-hover flex flex-col items-center">
+                        <img src="https://i.postimg.cc/h4sFk10Z/IMG-1588.png" alt="PMP Logo" class="w-16 h-16 mb-4 object-contain" loading="lazy">
+                        <h3 class="text-lg font-bold text-blue-700 mb-2">PMP®</h3>
+                        <p class="text-sm text-gray-700 mb-2">Project Management Professional</p>
+                        <p class="text-xs text-gray-500 mb-2">المحترف في إدارة المشاريع</p>
                     </div>
-                    <div class="mb-16">
-                        <h2 class="text-3xl font-bold text-blue-800 mb-8 text-center">Specialized Certifications – الشهادات المتخصصة</h2>
-                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                            <div class="bg-white rounded-2xl shadow-lg p-6 card-hover flex flex-col items-center">
-                                <img src="https://i.postimg.cc/W3Pthct7/IMG-1594.png" alt="PMI-CP Logo" class="w-16 h-16 mb-4 object-contain" loading="lazy">
-                                <h3 class="text-lg font-bold text-teal-700 mb-2">PMI-CP™</h3>
-                                <p class="text-sm text-gray-700 mb-2">PMI Construction Professional</p>
-                                <p class="text-xs text-gray-500 mb-2">المحترف في إدارة مشاريع البناء</p>
-                            </div>
-                            <div class="bg-white rounded-2xl shadow-lg p-6 card-hover flex flex-col items-center">
-                                <img src="https://i.postimg.cc/1XvzCgBW/IMG-1593.png" alt="PMI-ACP Logo" class="w-16 h-16 mb-4 object-contain" loading="lazy">
-                                <h3 class="text-lg font-bold text-orange-700 mb-2">PMI-ACP®</h3>
-                                <p class="text-sm text-gray-700 mb-2">PMI Agile Certified Practitioner</p>
-                                <p class="text-xs text-gray-500 mb-2">الممارس المعتمد في الأساليب الرشيقة</p>
-                            </div>
-                            <div class="bg-white rounded-2xl shadow-lg p-6 card-hover flex flex-col items-center">
-                                <img src="https://i.postimg.cc/mkLDy3Yz/IMG-1591.png" alt="PMI-RMP Logo" class="w-16 h-16 mb-4 object-contain" loading="lazy">
-                                <h3 class="text-lg font-bold text-red-700 mb-2">PMI-RMP®</h3>
-                                <p class="text-sm text-gray-700 mb-2">PMI Risk Management Professional</p>
-                                <p class="text-xs text-gray-500 mb-2">المحترف المعتمد في إدارة المخاطر</p>
-                            </div>
-                            <div class="bg-white rounded-2xl shadow-lg p-6 card-hover flex flex-col items-center">
-                                <img src="https://i.postimg.cc/ydW4yCx3/blob-1.png" alt="PMI-PBA Logo" class="w-16 h-16 mb-4 object-contain" loading="lazy">
-                                <h3 class="text-lg font-bold text-pink-700 mb-2">PMI-PBA®</h3>
-                                <p class="text-sm text-gray-700 mb-2">PMI Professional in Business Analysis</p>
-                                <p class="text-xs text-gray-500 mb-2">المحترف المعتمد في تحليل الأعمال</p>
-                            </div>
-                            <div class="bg-white rounded-2xl shadow-lg p-6 card-hover flex flex-col items-center">
-                                <img src="https://i.postimg.cc/BvmfFnSG/blob-2.png" alt="PMI-SP Logo" class="w-16 h-16 mb-4 object-contain" loading="lazy">
-                                <h3 class="text-lg font-bold text-yellow-700 mb-2">PMI-SP®</h3>
-                                <p class="text-sm text-gray-700 mb-2">PMI Scheduling Professional</p>
-                                <p class="text-xs text-gray-500 mb-2">المحترف المعتمد في جدولة المشاريع</p>
-                            </div>
-                            <div class="bg-white rounded-2xl shadow-lg p-6 card-hover flex flex-col items-center">
-                                <img src="https://i.postimg.cc/PqVrj48Z/blob-3.png" alt="CPMAI Logo" class="w-16 h-16 mb-4 object-contain" loading="lazy">
-                                <h3 class="text-lg font-bold text-gray-700 mb-2">CPMAI™</h3>
-                                <p class="text-sm text-gray-700 mb-2">Cognitive Project Management in AI</p>
-                                <p class="text-xs text-gray-500 mb-2">إدارة المشاريع المعرفية باستخدام الذكاء الاصطناعي</p>
-                            </div>
-                            <div class="bg-white rounded-2xl shadow-lg p-6 card-hover flex flex-col items-center">
-                                <img src="https://i.postimg.cc/mgG4fnXK/gpm-b-badge.png" alt="GPM-b Logo" class="w-16 h-16 mb-4 object-contain" loading="lazy">
-                                <h3 class="text-lg font-bold text-green-700 mb-2">GPM-b™</h3>
-                                <p class="text-sm text-gray-700 mb-2">Green Project Manager – Basic</p>
-                                <p class="text-xs text-gray-500 mb-2">مدير المشاريع الأخضر – المستوى الأساسي</p>
-                            </div>
-                        </div>
+                    <div class="bg-white rounded-2xl shadow-lg p-6 card-hover flex flex-col items-center">
+                        <img src="https://i.postimg.cc/FHg49xwz/twitter-thumb-201604-blob.png" alt="PgMP Logo" class="w-16 h-16 mb-4 object-contain" loading="lazy">
+                        <h3 class="text-lg font-bold text-purple-700 mb-2">PgMP®</h3>
+                        <p class="text-sm text-gray-700 mb-2">Program Management Professional</p>
+                        <p class="text-xs text-gray-500 mb-2">المحترف في إدارة البرامج</p>
+                    </div>
+                    <div class="bg-white rounded-2xl shadow-lg p-6 card-hover flex flex-col items-center">
+                        <img src="https://i.postimg.cc/tgqH7xH5/blob.png" alt="PfMP Logo" class="w-16 h-16 mb-4 object-contain" loading="lazy">
+                        <h3 class="text-lg font-bold text-indigo-700 mb-2">PfMP®</h3>
+                        <p class="text-sm text-gray-700 mb-2">Portfolio Management Professional</p>
+                        <p class="text-xs text-gray-500 mb-2">المحترف في إدارة المحافظ</p>
                     </div>
                 </div>
             </div>
-            <!-- نهاية شهادات PMI -->
+            <div class="mb-16">
+                <h2 class="text-3xl font-bold text-blue-800 mb-8 text-center">Specialized Certifications – الشهادات المتخصصة</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="bg-white rounded-2xl shadow-lg p-6 card-hover flex flex-col items-center">
+                        <img src="https://i.postimg.cc/W3Pthct7/IMG-1594.png" alt="PMI-CP Logo" class="w-16 h-16 mb-4 object-contain" loading="lazy">
+                        <h3 class="text-lg font-bold text-teal-700 mb-2">PMI-CP™</h3>
+                        <p class="text-sm text-gray-700 mb-2">PMI Construction Professional</p>
+                        <p class="text-xs text-gray-500 mb-2">المحترف في إدارة مشاريع البناء</p>
+                    </div>
+                    <div class="bg-white rounded-2xl shadow-lg p-6 card-hover flex flex-col items-center">
+                        <img src="https://i.postimg.cc/1XvzCgBW/IMG-1593.png" alt="PMI-ACP Logo" class="w-16 h-16 mb-4 object-contain" loading="lazy">
+                        <h3 class="text-lg font-bold text-orange-700 mb-2">PMI-ACP®</h3>
+                        <p class="text-sm text-gray-700 mb-2">PMI Agile Certified Practitioner</p>
+                        <p class="text-xs text-gray-500 mb-2">الممارس المعتمد في الأساليب الرشيقة</p>
+                    </div>
+                    <div class="bg-white rounded-2xl shadow-lg p-6 card-hover flex flex-col items-center">
+                        <img src="https://i.postimg.cc/mkLDy3Yz/IMG-1591.png" alt="PMI-RMP Logo" class="w-16 h-16 mb-4 object-contain" loading="lazy">
+                        <h3 class="text-lg font-bold text-red-700 mb-2">PMI-RMP®</h3>
+                        <p class="text-sm text-gray-700 mb-2">PMI Risk Management Professional</p>
+                        <p class="text-xs text-gray-500 mb-2">المحترف المعتمد في إدارة المخاطر</p>
+                    </div>
+                    <div class="bg-white rounded-2xl shadow-lg p-6 card-hover flex flex-col items-center">
+                        <img src="https://i.postimg.cc/ydW4yCx3/blob-1.png" alt="PMI-PBA Logo" class="w-16 h-16 mb-4 object-contain" loading="lazy">
+                        <h3 class="text-lg font-bold text-pink-700 mb-2">PMI-PBA®</h3>
+                        <p class="text-sm text-gray-700 mb-2">PMI Professional in Business Analysis</p>
+                        <p class="text-xs text-gray-500 mb-2">المحترف المعتمد في تحليل الأعمال</p>
+                    </div>
+                    <div class="bg-white rounded-2xl shadow-lg p-6 card-hover flex flex-col items-center">
+                        <img src="https://i.postimg.cc/BvmfFnSG/blob-2.png" alt="PMI-SP Logo" class="w-16 h-16 mb-4 object-contain" loading="lazy">
+                        <h3 class="text-lg font-bold text-yellow-700 mb-2">PMI-SP®</h3>
+                        <p class="text-sm text-gray-700 mb-2">PMI Scheduling Professional</p>
+                        <p class="text-xs text-gray-500 mb-2">المحترف المعتمد في جدولة المشاريع</p>
+                    </div>
+                    <div class="bg-white rounded-2xl shadow-lg p-6 card-hover flex flex-col items-center">
+                        <img src="https://i.postimg.cc/PqVrj48Z/blob-3.png" alt="CPMAI Logo" class="w-16 h-16 mb-4 object-contain" loading="lazy">
+                        <h3 class="text-lg font-bold text-gray-700 mb-2">CPMAI™</h3>
+                        <p class="text-sm text-gray-700 mb-2">Cognitive Project Management in AI</p>
+                        <p class="text-xs text-gray-500 mb-2">إدارة المشاريع المعرفية باستخدام الذكاء الاصطناعي</p>
+                    </div>
+                    <div class="bg-white rounded-2xl shadow-lg p-6 card-hover flex flex-col items-center">
+                        <img src="https://i.postimg.cc/mgG4fnXK/gpm-b-badge.png" alt="GPM-b Logo" class="w-16 h-16 mb-4 object-contain" loading="lazy">
+                        <h3 class="text-lg font-bold text-green-700 mb-2">GPM-b™</h3>
+                        <p class="text-sm text-gray-700 mb-2">Green Project Manager – Basic</p>
+                        <p class="text-xs text-gray-500 mb-2">مدير المشاريع الأخضر – المستوى الأساسي</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </section>
@@ -1037,7 +1075,7 @@
                         </article>
 
                         <article class="bg-white rounded-2xl shadow-lg overflow-hidden card-hover">
-                            <div class="bg-gradient-to-r from-red-500 to-red-700 h-48 flex items-center justify-center">
+                            <div class="bg-gradient-to-r from-red-500 to-red-700 h-48 flex items-center justifycenter">
                                 <i class="fas fa-shield-alt text-white text-6xl"></i>
                             </div>
                             <div class="p-6">
@@ -1097,7 +1135,7 @@
                                 <i class="fas fa-chevron-down text-blue-600 transform transition-transform" id="faq-icon-0"></i>
                                 <h3 class="text-xl font-bold text-gray-800">ما هي متطلبات الحصول على شهادة PMP؟</h3>
                             </button>
-                            <div class="faq-answer px-6 pb-6" id="faq-answer-0">
+                            <div class="faq-answer px-6 pb-6" id="faq-answer-0" style="display: none;">
                                 <p class="text-gray-700 leading-relaxed mb-2">
                                     للحصول على شهادة PMP، تحتاج إلى: درجة البكالوريوس مع 4500 ساعة خبرة في إدارة المشاريع، أو الثانوية العامة مع 7500 ساعة خبرة، بالإضافة إلى 35 ساعة تدريبية في إدارة المشاريع.
                                 </p>
@@ -1109,7 +1147,7 @@
                                 <i class="fas fa-chevron-down text-blue-600 transform transition-transform" id="faq-icon-1"></i>
                                 <h3 class="text-xl font-bold text-gray-800">كم تستغرق مدة الدورة التدريبية؟</h3>
                             </button>
-                            <div class="faq-answer px-6 pb-6" id="faq-answer-1">
+                            <div class="faq-answer px-6 pb-6" id="faq-answer-1" style="display: none;">
                                 <p class="text-gray-700 leading-relaxed mb-2">
                                     تختلف مدة الدورة حسب نوع الشهادة. دورة PMP تستغرق 35 ساعة تدريبية، بينما دورة CAPM تستغرق 23 ساعة. يمكن إكمال الدورات خلال 4-6 أسابيع حسب الجدول الزمني المختار.
                                 </p>
@@ -1121,7 +1159,7 @@
                                 <i class="fas fa-chevron-down text-blue-600 transform transition-transform" id="faq-icon-2"></i>
                                 <h3 class="text-xl font-bold text-gray-800">هل الدورات متاحة أونلاين؟</h3>
                             </button>
-                            <div class="faq-answer px-6 pb-6" id="faq-answer-2">
+                            <div class="faq-answer px-6 pb-6" id="faq-answer-2" style="display: none;">
                                 <p class="text-gray-700 leading-relaxed mb-2">
                                     نعم، جميع دوراتنا متاحة أونلاين من خلال منصتنا التعليمية المتطورة. يمكنك الوصول للمحتوى في أي وقت ومن أي مكان، مع إمكانية التفاعل المباشر مع المدرب.
                                 </p>
@@ -1133,7 +1171,7 @@
                                 <i class="fas fa-chevron-down text-blue-600 transform transition-transform" id="faq-icon-3"></i>
                                 <h3 class="text-xl font-bold text-gray-800">ما هي نسبة النجاح في الامتحانات؟</h3>
                             </button>
-                            <div class="faq-answer px-6 pb-6" id="faq-answer-3">
+                            <div class="faq-answer px-6 pb-6" id="faq-answer-3" style="display: none;">
                                 <p class="text-gray-700 leading-relaxed mb-2">
                                     نحن فخورون بنسبة نجاح عالية تتجاوز 95% في امتحانات PMI. هذا بفضل منهجيتنا التدريبية المتطورة والدعم المستمر للمتدربين حتى بعد انتهاء الدورة.
                                 </p>
@@ -1145,7 +1183,7 @@
                                 <i class="fas fa-chevron-down text-blue-600 transform transition-transform" id="faq-icon-4"></i>
                                 <h3 class="text-xl font-bold text-gray-800">هل تقدمون دعم ما بعد الدورة؟</h3>
                             </button>
-                            <div class="faq-answer px-6 pb-6" id="faq-answer-4">
+                            <div class="faq-answer px-6 pb-6" id="faq-answer-4" style="display: none;">
                                 <p class="text-gray-700 leading-relaxed mb-2">
                                     نعم، نقدم دعماً شاملاً يشمل: الإجابة على الاستفسارات، مراجعة طلبات التقديم للامتحان، اختبارات تجريبية إضافية، ومتابعة مستمرة حتى نجاحك في الامتحان.
                                 </p>
@@ -1157,7 +1195,7 @@
                                 <i class="fas fa-chevron-down text-blue-600 transform transition-transform" id="faq-icon-5"></i>
                                 <h3 class="text-xl font-bold text-gray-800">ما هي طرق الدفع المتاحة؟</h3>
                             </button>
-                            <div class="faq-answer px-6 pb-6" id="faq-answer-5">
+                            <div class="faq-answer px-6 pb-6" id="faq-answer-5" style="display: none;">
                                 <p class="text-gray-700 leading-relaxed mb-2">
                                     نوفر طرق دفع متنوعة تشمل: التحويل البنكي، بطاقات الائتمان، المحافظ الإلكترونية، وإمكانية التقسيط على دفعات. كما نقدم خصومات للمجموعات والتسجيل المبكر.
                                 </p>
@@ -1377,9 +1415,14 @@
         function toggleFAQ(index) {
             const answer = document.getElementById(`faq-answer-${index}`);
             const icon = document.getElementById(`faq-icon-${index}`);
-            
-            answer.classList.toggle('active');
-            icon.classList.toggle('rotate-180');
+            // Toggle display
+            if (answer.style.display === "none" || answer.style.display === "") {
+                answer.style.display = "block";
+                icon.classList.add('rotate-180');
+            } else {
+                answer.style.display = "none";
+                icon.classList.remove('rotate-180');
+            }
         }
 
         // Contact form functionality
@@ -1394,6 +1437,48 @@
             // Set home page as active by default
             showPage('home');
         });
+
+        // Carousel logic for courses
+    let coursesIndex = 0;
+    const coursesSlides = document.getElementById('courses-slides');
+    const coursesTotal = coursesSlides.children.length;
+    function showCoursesSlide(idx) {
+        coursesSlides.style.transform = `translateX(-${idx * 100}%)`;
+    }
+    document.getElementById('courses-prev').onclick = function() {
+        coursesIndex = (coursesIndex - 1 + coursesTotal) % coursesTotal;
+        showCoursesSlide(coursesIndex);
+    };
+    document.getElementById('courses-next').onclick = function() {
+        coursesIndex = (coursesIndex + 1) % coursesTotal;
+        showCoursesSlide(coursesIndex);
+    };
+    setInterval(function() {
+        coursesIndex = (coursesIndex + 1) % coursesTotal;
+        showCoursesSlide(coursesIndex);
+    }, 4000);
+    showCoursesSlide(coursesIndex);
+
+    // Carousel logic for reviews
+    let reviewsIndex = 0;
+    const reviewsSlides = document.getElementById('reviews-slides');
+    const reviewsTotal = reviewsSlides.children.length;
+    function showReviewsSlide(idx) {
+        reviewsSlides.style.transform = `translateX(-${idx * 100}%)`;
+    }
+    document.getElementById('reviews-prev').onclick = function() {
+        reviewsIndex = (reviewsIndex - 1 + reviewsTotal) % reviewsTotal;
+        showReviewsSlide(reviewsIndex);
+    };
+    document.getElementById('reviews-next').onclick = function() {
+        reviewsIndex = (reviewsIndex + 1) % reviewsTotal;
+        showReviewsSlide(reviewsIndex);
+    };
+    setInterval(function() {
+        reviewsIndex = (reviewsIndex + 1) % reviewsTotal;
+        showReviewsSlide(reviewsIndex);
+    }, 4000);
+    showReviewsSlide(reviewsIndex);
     </script>
 </body>
 </html>
